@@ -1,0 +1,41 @@
+{
+  "name": "telegrafen-wc",
+  "private": false,
+  "version": "0.0.0",
+  "description": "This is a simple utility package",
+  "author": "<YOUR_NAME>",
+  "license": "MIT",
+  "homepage": "<YOUR_SITE_URL>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/larserikfinholt/my-ts-lib.git"
+  },
+  "bugs": {
+    "url": "https://github.com/larserikfinholt/my-ts-lib/issues"
+  },
+  "keywords": ["sample"],
+  "type": "module",
+  "main": "./dist/telegrafen-wc.umd.cjs",
+  "module": "./dist/telegrafen-wc.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/telegrafen-wc.js",
+      "require": "./dist/telegrafen-wc.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.9",
+    "vite-plugin-dts": "^2.3.0"
+  }
+}
