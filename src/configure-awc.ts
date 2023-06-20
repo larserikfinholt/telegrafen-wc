@@ -14,7 +14,7 @@ AdaptiveDesignSystem.defineComponents({
   radioDefinition,
   radioGroupDefinition,
   switchDefinition,
-  // textFieldDefinition // Uncomment to define the `adaptive-text-field` element.
+  textFieldDefinition // Uncomment to define the `adaptive-text-field` element.
 });
 
 import {
@@ -41,7 +41,7 @@ const start = () => {
 
   // Simple event handlers to change Design Token values:
 
-  document.getElementById("darkMode").onchange = function (event) {
+  (document.getElementById("darkMode") as any).onchange = function (event:any) {
     const checked = (event.target as FASTSwitch).checked;
     console.log("darkMode change", checked);
     // This Design Token causes `layerFillFixedBase` to update.
@@ -51,7 +51,8 @@ const start = () => {
     );
   };
 
-  document.getElementById("accentColor").onchange = function (event) {
+
+  (document.getElementById("accentColor") as any).onchange = function (event:any) {
     const value = (event.target as FASTRadioGroup).value;
     console.log("accentColor change", value);
     // This Design Token causes the accent palette to update, including any components styled with recipes based on that palette.
@@ -59,4 +60,4 @@ const start = () => {
   };
 };
 
-export { start };
+export default start ;
