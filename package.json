@@ -1,7 +1,7 @@
 {
   "name": "telegrafen-wc",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "This is a simple utility package",
   "author": "<YOUR_NAME>",
   "license": "MIT",
@@ -13,7 +13,9 @@
   "bugs": {
     "url": "https://github.com/larserikfinholt/telegrafen-wc/issues"
   },
-  "keywords": ["sample"],
+  "keywords": [
+    "sample"
+  ],
   "type": "module",
   "main": "./dist/telegrafen-wc.umd.cjs",
   "module": "./dist/telegrafen-wc.js",
