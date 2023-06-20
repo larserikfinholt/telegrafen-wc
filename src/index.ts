@@ -2,4 +2,4 @@
 
 export { default as sum } from './sum.js';
 export { default as subtract } from './subtract.js';
-export { start } from "./configure-awc.js"
+export { start as start} from "./configure-awc.js"
