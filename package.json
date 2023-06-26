@@ -35,11 +35,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@adaptive-web/adaptive-web-components": "0.2.0"
+    "@adaptive-web/adaptive-web-components": "0.2.0",
+    "@microsoft/fast-element": "2.0.0-beta.23"
   },
   "devDependencies": {
     "@types/node": "^20.3.1",
     "typescript": "^5.0.2",
+    
     "vite": "^4.3.9",
     "vite-plugin-dts": "^2.3.0",
     "vite-plugin-svgo": "^1.3.0"

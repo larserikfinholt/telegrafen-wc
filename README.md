@@ -1,17 +1,33 @@
 # telegrafen-wc
-Komponentbibliotek. 
+UI component library
 
-Storybook in progress, some sample components can be seen by running `npm run dev`
+Contains:
+- button, input, radios, tabs etc from Adaptive Web Components (and fast-foundation)
+- counter (and other custom components based on fast-element)
+
+Sample components can be seen by running `npm run dev`
+
+
 
 # using the library
-`npm install telegrafen-wc`
+See the example project here: `\examples\use-telegrafen-wc` or do the following:
 
-In main
+Install the library in your project `npm install telegrafen-wc`
+
+Initialize it in your main
 ```
-import {start} from "telegrafen-wc";
+import {init} from "telegrafen-wc";
 
-start()
+init()
 
+```
+
+Then you may use the compoents as regular `twc` components
+
+```
+<twc-button>Click me</twc-button>
+
+<twc-counter></twc-counter>
 ```
 
 

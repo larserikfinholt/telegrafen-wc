@@ -9,7 +9,8 @@ import { switchDefinition } from "@adaptive-web/adaptive-web-components/switch";
 import { textFieldDefinition } from "@adaptive-web/adaptive-web-components/text-field";
 
 
-// const SmiDesignSystem = new DesignSystem("smi");
+
+// const TwcDesignSystem = new DesignSystem("twc");
 
 AdaptiveDesignSystem.defineComponents({
   avatarDefinition,
@@ -39,7 +40,7 @@ const init = () => {
   // This must be called during initialization for the Design Tokens to be setup so the component styling is applied.
   DesignToken.registerDefaultStyleTarget();
 
-  // SmiDesignSystem.withPrefix("smi");
+  // TwcDesignSystem.withPrefix("twc");
 
   // The `fillColor` Design Token is the reference for many color recipes - setup the layering system as that basis.
   // Look at the css for how this displays in the browser in the plain html model.
