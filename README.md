@@ -1,2 +1,27 @@
 # telegrafen-wc
-This is a package created to practice building a TypeScript package with Vite.
+Komponentbibliotek
+`npm run start`
+
+# using the library
+`npm install telegrafen-wc`
+
+In main
+```
+import {start} from "telegrafen-wc";
+
+start()
+
+```
+
+
+
+
+# Build new version
+To publish a new version
+`npm run build`
+
+`npm run build`
+
+`npm publish`
+
+

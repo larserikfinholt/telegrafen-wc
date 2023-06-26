@@ -30,10 +30,14 @@ import {
   FASTSwitch,
 } from "@microsoft/fast-foundation";
 
-const start = () => {
-  console.log("start");
+const init = () => {
+  console.log("init telefrafen-wc");
   // This must be called during initialization for the Design Tokens to be setup so the component styling is applied.
   DesignToken.registerDefaultStyleTarget();
+
+  AdaptiveDesignSystem.withPrefix("smi");
+
+
 
   // The `fillColor` Design Token is the reference for many color recipes - setup the layering system as that basis.
   // Look at the css for how this displays in the browser in the plain html model.
@@ -60,4 +64,4 @@ const start = () => {
   };
 };
 
-export default start ;
+export default init ;
