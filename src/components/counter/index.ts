@@ -1,15 +1,15 @@
 import {
-    html,
-    css,
-    customElement,
-    observable,
-    FASTElement,
+  html,
+  css,
+  customElement,
+  observable,
+  FASTElement,
 } from "@microsoft/fast-element";
 
 const template = html<MyCounter>`
-    <button @click="${x => (x.count = Math.max(0, x.count - 1))}">-</button>
-    <span @click="${x=> alert('sdf')}">${x => x.count}</span>
-    <button @click="${x => x.count++}">+</button>
+  <button @click="${(x) => (x.count = Math.max(0, x.count - 1))}">-</button>
+  <span @click="${(x: any) => alert("testing " + x.count)}">${(x) => x.count}</span>
+  <button @click="${(x) => x.count++}">+</button>
 `;
 
 const styles = css`
@@ -46,11 +46,11 @@ const styles = css`
 `;
 
 @customElement({
-    name: "my-counter",
-    template,
-    styles,
+  name: "my-counter",
+  template,
+  styles,
 })
 export class MyCounter extends FASTElement {
-    @observable
-    public count: number = 8;
+  @observable
+  public count: number = 8;
 }

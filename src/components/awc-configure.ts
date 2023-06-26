@@ -35,7 +35,7 @@ import {
   FASTSwitch,
 } from "@microsoft/fast-foundation";
 
-const init = () => {
+const start = () => {
   console.log("init telefrafen-wc");
   // This must be called during initialization for the Design Tokens to be setup so the component styling is applied.
   DesignToken.registerDefaultStyleTarget();
@@ -68,4 +68,4 @@ const init = () => {
 };
 
 
-export default init ;
+export default start ;

@@ -13,8 +13,7 @@
             font-family: sans-serif;
         }
         adaptive-card {
-            height: 500px;
-            width: 500px;
+            width: 600px;
             display: flex;
             flex-direction: column;
             gap: 20px;
@@ -27,8 +26,8 @@
 <body>
     <!-- adaptive- will be replaced with other prefix -->
     <adaptive-card id="card">
-        <h1>Sample usage of telegrafen-wc</h1>
-
+        <h1>TWC Components (from Adaptive (fast-foundation))</h1>
+        <!-- prefix wil be changed from adaptive to twc -->
         <span>This is a Card with a few slotted components. These work with any frameworks
         like native platform elements including &lt;button&gt; or &lt;input&gt;.</span>
         <adaptive-avatar>AC</adaptive-avatar>
@@ -43,6 +42,9 @@
             <adaptive-radio value="31BB25">Green</adaptive-radio>
             <adaptive-radio value="2585BB">Blue</adaptive-radio>
         </adaptive-radio-group>
+        <h1>TWC Components (ours)</h1>
+        <!-- prefix wil be changed from my to twc -->
+        <my-counter></my-counter>
     </adaptive-card>
 </body>
 

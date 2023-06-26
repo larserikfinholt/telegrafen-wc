@@ -11,7 +11,7 @@
         "dev": "vite --open"
     },
     "dependencies": {
-        "telegrafen-wc": "^0.0.4"
+        "telegrafen-wc": "^0.0.5"
     },
     "devDependencies": {
         "vite-plugin-svgo": "^1.3.0",
