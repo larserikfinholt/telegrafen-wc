@@ -1,6 +1,7 @@
 # telegrafen-wc
-Komponentbibliotek
-`npm run start`
+Komponentbibliotek. 
+
+Storybook in progress, some sample components can be seen by running `npm run dev`
 
 # using the library
 `npm install telegrafen-wc`
@@ -12,8 +13,6 @@ import {start} from "telegrafen-wc";
 start()
 
 ```
-
-
 
 
 # Build new version

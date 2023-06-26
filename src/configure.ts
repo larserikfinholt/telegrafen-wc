@@ -7,6 +7,10 @@ import { radioDefinition } from "@adaptive-web/adaptive-web-components/radio";
 import { radioGroupDefinition } from "@adaptive-web/adaptive-web-components/radio-group";
 import { switchDefinition } from "@adaptive-web/adaptive-web-components/switch";
 import { textFieldDefinition } from "@adaptive-web/adaptive-web-components/text-field";
+
+
+// const SmiDesignSystem = new DesignSystem("smi");
+
 AdaptiveDesignSystem.defineComponents({
   avatarDefinition,
   buttonDefinition,
@@ -35,9 +39,7 @@ const init = () => {
   // This must be called during initialization for the Design Tokens to be setup so the component styling is applied.
   DesignToken.registerDefaultStyleTarget();
 
-  AdaptiveDesignSystem.withPrefix("smi");
-
-
+  // SmiDesignSystem.withPrefix("smi");
 
   // The `fillColor` Design Token is the reference for many color recipes - setup the layering system as that basis.
   // Look at the css for how this displays in the browser in the plain html model.
@@ -63,5 +65,6 @@ const init = () => {
     accentBaseColor.withDefault("#" + value);
   };
 };
+
 
 export default init ;

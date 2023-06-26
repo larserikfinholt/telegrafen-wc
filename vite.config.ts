@@ -1,6 +1,8 @@
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
-import dts from 'vite-plugin-dts';
+// import dts from 'vite-plugin-dts';
+import svg from 'vite-plugin-svgo'
+
 
 
 // https://vitejs.dev/guide/build.html#library-mode
@@ -12,5 +14,5 @@ export default defineConfig({
         fileName: 'telegrafen-wc',
       },
     },
-    plugins: [dts()],
+    plugins: [svg({plugins:[]})]
   });
