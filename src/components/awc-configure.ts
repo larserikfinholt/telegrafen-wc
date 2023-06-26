@@ -8,7 +8,7 @@ import { radioGroupDefinition } from "@adaptive-web/adaptive-web-components/radi
 import { switchDefinition } from "@adaptive-web/adaptive-web-components/switch";
 import { textFieldDefinition } from "@adaptive-web/adaptive-web-components/text-field";
 
-
+import setDarkMode from "./awc-darkmode.js"
 
 // const TwcDesignSystem = new DesignSystem("twc");
 
@@ -19,14 +19,12 @@ AdaptiveDesignSystem.defineComponents({
   radioDefinition,
   radioGroupDefinition,
   switchDefinition,
-  textFieldDefinition // Uncomment to define the `adaptive-text-field` element.
+  textFieldDefinition, // Uncomment to define the `adaptive-text-field` element.
 });
 
 import {
   accentBaseColor,
   fillColor,
-  LayerBaseLuminance,
-  layerFillBaseLuminance,
   layerFillFixedBase,
 } from "@adaptive-web/adaptive-ui";
 import {
@@ -48,24 +46,28 @@ const start = () => {
 
   // Simple event handlers to change Design Token values:
 
-  (document.getElementById("darkMode") as any).onchange = function (event:any) {
-    const checked = (event.target as FASTSwitch).checked;
-    console.log("darkMode change", checked);
-    // This Design Token causes `layerFillFixedBase` to update.
-    // The constants are for convenience, but try changing them to another decimal value between 0 and 1.
-    layerFillBaseLuminance.withDefault(
-      checked ? LayerBaseLuminance.DarkMode : LayerBaseLuminance.LightMode
-    );
-  };
+  if (document.getElementById("darkMode")) {
+    (document.getElementById("darkMode") as any).onchange = function (
+      event: any
+    ) {
+      const checked = (event.target as FASTSwitch).checked;
+      // This Design Token causes `layerFillFixedBase` to update.
+      // The constants are for convenience, but try changing them to another decimal value between 0 and 1.
+      setDarkMode(checked);
+    };
+  }
 
-
-  (document.getElementById("accentColor") as any).onchange = function (event:any) {
-    const value = (event.target as FASTRadioGroup).value;
-    console.log("accentColor change", value);
-    // This Design Token causes the accent palette to update, including any components styled with recipes based on that palette.
-    accentBaseColor.withDefault("#" + value);
-  };
+  if (document.getElementById("accentColor")) {
+    (document.getElementById("accentColor") as any).onchange = function (
+      event: any
+    ) {
+      const value = (event.target as FASTRadioGroup).value;
+      console.log("accentColor change", value);
+      // This Design Token causes the accent palette to update, including any components styled with recipes based on that palette.
+      accentBaseColor.withDefault("#" + value);
+    };
+  }
 };
 
 
-export default start ;
+export default start;

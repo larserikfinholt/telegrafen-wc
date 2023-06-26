@@ -1,4 +1,8 @@
-import {start } from "telegrafen-wc"
+import {start, setDarkMode } from "telegrafen-wc"
+
+
 
 
 start();
+
+setDarkMode(true);
