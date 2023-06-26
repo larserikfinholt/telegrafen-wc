@@ -1,7 +1,7 @@
 {
   "name": "telegrafen-wc",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "This is a simple utility package",
   "author": "<YOUR_NAME>",
   "license": "MIT",
@@ -41,7 +41,6 @@
   "devDependencies": {
     "@types/node": "^20.3.1",
     "typescript": "^5.0.2",
-    
     "vite": "^4.3.9",
     "vite-plugin-dts": "^2.3.0",
     "vite-plugin-svgo": "^1.3.0"
